@@ -23,6 +23,17 @@ public class LevelSetup {
 			currentPieces.add(new Crewmate(7));
 			currentPieces.add(new DeadBody(13));
 		}
+		else if(levelNum == 2) {
+			currentPieces.add(new Imposter(0));
+			currentPieces.add(new DeadBody(8));
+			currentPieces.add(new DeadBody(6));
+			currentPieces.add(new Evidence(5));
+			currentPieces.add(new Task(15));
+			currentPieces.add(new Task(20));
+			currentPieces.add(new Crewmate(17));
+			currentPieces.add(new DeadBody(19));
+			
+		}
 	}
 	
 	public Drawable[] getBoard() {

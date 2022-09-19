@@ -24,7 +24,7 @@ public class Evidence extends GamePiece implements Moveable {
 			newLocation = currentLocation + 1;
 		}
 		
-		if(gameBoard[newLocation] == null) {
+		if(gameBoard[newLocation] == null && newLocation != 0 && newLocation != gameBoard.length) {
 			//If our target space is empty, move to that space
 			
 			gameBoard[currentLocation] = null;
