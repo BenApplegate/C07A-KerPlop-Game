@@ -26,4 +26,12 @@ public class DeadBody extends GamePiece {
 		return null;
 	}
 
+
+
+
+	@Override
+	public String toString() {
+		return "D - Dead Body (makes you look SUS if touched)";
+	}
+
 }
