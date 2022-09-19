@@ -29,6 +29,7 @@ public class Evidence extends GamePiece implements Moveable {
 			
 			gameBoard[currentLocation] = null;
 			gameBoard[newLocation] = this;
+			setLocation(newLocation);
 		}
 	}
 

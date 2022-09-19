@@ -7,7 +7,7 @@ public class DeadBody extends GamePiece {
 	
 
 	
-	public DeadBody(char symbol, String label, int location) {
+	public DeadBody(int location) {
 		super('D', "Dead body", location);
 	}
 	

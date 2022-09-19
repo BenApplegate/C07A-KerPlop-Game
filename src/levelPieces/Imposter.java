@@ -34,6 +34,7 @@ public class Imposter extends GamePiece implements Moveable{
 				//If we selected an empty location, move ourselves to that location and end loop
 				gameBoard[getLocation()] = null;
 				gameBoard[newLocation] = this;
+				setLocation(newLocation);
 				break;
 			}
 		}
