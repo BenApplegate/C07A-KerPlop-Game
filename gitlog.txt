@@ -1,3 +1,40 @@
+commit 8ed50dbe655c5bcde67b17d5f9fa52a9f2937ad5
+Author: BenApplegate <applegateben03@gmail.com>
+Date:   Fri Sep 23 20:03:27 2022 -0600
+
+    Added movement test for evidence
+
+commit 5f1c515971440a39b6d5dd93c401fe7f91806419
+Author: BenApplegate <applegateben03@gmail.com>
+Date:   Fri Sep 23 19:50:15 2022 -0600
+
+    Added tests for crewmate and imposter movement
+
+commit 1da890d5c7dedc6682490a15e169138aef9723ed
+Author: FloorismadeoutofFloor <gwdina@gmail.com>
+Date:   Fri Sep 23 19:45:42 2022 -0600
+
+    added tests to TestInteractions and changed return function from null to InteractionResult.NONE in interact() function for each piece
+
+commit ed40fc5ce01a42d75e7947b7943a7b0aea9876d0
+Author: BenApplegate <applegateben03@gmail.com>
+Date:   Fri Sep 23 18:35:46 2022 -0600
+
+    Imported Junit library into test classes
+
+commit ee29c9f235d166ecc65004716095b47611907488
+Merge: 0dfe084 b3d7215
+Author: BenApplegate <applegateben03@gmail.com>
+Date:   Fri Sep 23 18:30:49 2022 -0600
+
+    Merge branch 'master' of https://github.com/BenApplegate/C07A-KerPlop-Game
+
+commit 0dfe08446715eb6942d3341e0e3fd7f350903923
+Author: BenApplegate <applegateben03@gmail.com>
+Date:   Fri Sep 23 18:30:34 2022 -0600
+
+    Created new package and classes for tests
+
 commit b3d721595be0298956ae8775a4df24b91277e95d
 Author: FloorismadeoutofFloor <gwdina@gmail.com>
 Date:   Sun Sep 18 20:48:14 2022 -0600
