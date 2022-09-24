@@ -27,7 +27,7 @@ public class Crewmate extends GamePiece implements Moveable {
 			return;
 		}
 
-		if(gameBoard[newLocation] == null) {
+		if(gameBoard[newLocation] == null && newLocation != playerLocation) {
 			gameBoard[getLocation()] = null;
 			gameBoard[newLocation] = this;
 			setLocation(newLocation);

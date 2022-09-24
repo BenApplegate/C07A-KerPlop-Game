@@ -31,8 +31,8 @@ public class Imposter extends GamePiece implements Moveable{
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		
-		//The imposter moves randomly, so we will loop until we find an open slot
-		while(true) {
+		//The imposter moves randomly, so we will attempt to find an open spot up to 5 times
+		for(int i = 0; i < 5; i++) {
 			int newLocation = new Random().nextInt(gameBoard.length);
 			if(gameBoard[newLocation] == null && newLocation != playerLocation) {
 				
