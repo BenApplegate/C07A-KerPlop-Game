@@ -8,6 +8,11 @@ import gameEngine.InteractionResult;
 
 public class Imposter extends GamePiece implements Moveable{
 	
+	@Override
+	public String toString() {
+		return "I - Imposter (moves around and tries kill to you, don't them in arms length, just try to beat him he's pretty S U S)";
+	}
+
 	public Imposter(int location) {
 		super('I', "Imposter", location);
 		

@@ -7,6 +7,11 @@ import gameEngine.Moveable;
 
 public class Crewmate extends GamePiece implements Moveable {
 
+	@Override
+	public String toString() {
+		return "C - Crewmate (do nothing and move at random)";
+	}
+
 	Crewmate(int location){
 		super('c', "Crewmate", location);
 	}

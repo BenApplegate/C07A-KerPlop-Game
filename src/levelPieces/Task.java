@@ -25,6 +25,11 @@ public class Task extends GamePiece {
 		return null;
 	}
 
+	@Override
+	public String toString() {
+		return "T - Task (complete to gain points)";
+	}
+
 	
 
 }

@@ -6,6 +6,11 @@ import gameEngine.Moveable;
 
 public class Evidence extends GamePiece implements Moveable {
 
+	@Override
+	public String toString() {
+		return "E - Evidence (will point out the imposter and you'll win)";
+	}
+
 	public Evidence(int location) {
 		super('E', "Evidence against the imposter", location);
 	}

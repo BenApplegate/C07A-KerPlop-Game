@@ -8,6 +8,9 @@ import gameEngine.Moveable;
 
 public class LevelSetup {
 	
+	
+	
+	
 	private int currentLevel;
 	private ArrayList<GamePiece> currentPieces = new ArrayList<GamePiece>(); //Stores what pieces we have on our board
 
@@ -17,6 +20,14 @@ public class LevelSetup {
 		if(levelNum == 1) {
 			//Load our new pieces for level 1 into arraylist
 			//Level 1 is very easy with only one obsticle that can damage you
+			//gives info on what's in level 1
+			System.out.println("level 1   Legend:");
+			System.out.println(new Task(-1));
+			System.out.println(new Crewmate(-1));
+			System.out.println(new DeadBody(-1));
+			System.out.println(new Vent());
+			System.out.println();
+			
 			currentPieces.add(new Task(3));
 			currentPieces.add(new Task(16));
 			currentPieces.add(new Crewmate(18));
@@ -24,6 +35,16 @@ public class LevelSetup {
 			currentPieces.add(new DeadBody(13));
 		}
 		else if(levelNum == 2) {
+			//gives info on what's in level 2
+			System.out.println("level 2   Legend:");
+			System.out.println(new Task(-1));
+			System.out.println(new Imposter(-1));
+			System.out.println(new DeadBody(-1));
+			System.out.println(new Crewmate(-1));
+			System.out.println(new Evidence(-1));
+			System.out.println(new Vent());
+			System.out.println();
+			
 			currentPieces.add(new Imposter(0));
 			currentPieces.add(new DeadBody(8));
 			currentPieces.add(new DeadBody(6));
