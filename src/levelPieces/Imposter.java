@@ -25,7 +25,7 @@ public class Imposter extends GamePiece implements Moveable{
 		if(playerLocation == getLocation() || playerLocation == getLocation()-1 || playerLocation == getLocation() + 1) {
 			return InteractionResult.KILL;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 
 	@Override

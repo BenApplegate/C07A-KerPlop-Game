@@ -44,7 +44,7 @@ public class Evidence extends GamePiece implements Moveable {
 		if(playerLocation == getLocation()) {
 			return InteractionResult.ADVANCE;
 		}
-		return null;
+		return InteractionResult.NONE;
 	}
 
 }

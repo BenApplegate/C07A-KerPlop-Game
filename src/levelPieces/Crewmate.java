@@ -12,7 +12,7 @@ public class Crewmate extends GamePiece implements Moveable {
 		return "C - Crewmate (do nothing and move at random)";
 	}
 
-	Crewmate(int location){
+	public Crewmate(int location){
 		super('c', "Crewmate", location);
 	}
 	

@@ -23,7 +23,8 @@ public class DeadBody extends GamePiece {
 		
 		
 		
-		return null;
+		
+		return InteractionResult.NONE;
 	}
 
 
