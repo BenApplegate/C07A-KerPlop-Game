@@ -73,6 +73,7 @@ public class TestMovingPieces {
 	 */
 	@Test
 	public void testCrewmateMovement() {
+
 		//First Test
 		Crewmate test1Crewmate = new Crewmate(1);
 		Drawable[] test1Board = {null, test1Crewmate, null, null};
@@ -96,7 +97,7 @@ public class TestMovingPieces {
 		}
 		if(test2Board[0] == test2Crewmate || test2Board[2] == test2Crewmate) {
 			fail();
-			//Fail if the crewmate is not found in either of the blocked slots;
+			//Fail if the crewmate is found in either of the blocked slots;
 		}
 		
 		//Third Test
@@ -113,4 +114,70 @@ public class TestMovingPieces {
 		}
 		
 	}
+	
+	/*
+	 * The evidence will attempt to move one space in the direction away from the player
+	 * It will not move if there is no open space
+	 * 
+	 * Test 1: The piece has both spaces next to it open, it should move
+	 * Test 2: The piece has no available movement spaces, it should not move
+	 * Test 3: The piece has one available movement space with the player towards the open space, it should not move
+	 * Test 4: The piece has one available space with the player away from the open space, the piece should move
+	 */
+	@Test
+	public void testEvidenceMovement() {
+		//First Test
+		Evidence test1Evidence = new Evidence(1);
+		Drawable[] test1Board = {null, test1Evidence, null, null};
+		test1Evidence.move(test1Board, 3);
+		if(test1Board[1] == test1Evidence) {
+			fail();
+			//Fail if the evidence did not move
+		}
+		if(test1Board[0] != test1Evidence) {
+			fail();
+			//Fail if the evidence is not found in the correct spot
+		}
+		
+		//Second Test
+		Evidence test2Evidence = new Evidence(1);
+		Drawable[] test2Board = {new Vent(), test2Evidence, null};
+		test2Evidence.move(test2Board, 2);
+		if(test2Board[1] != test2Evidence) {
+			fail();
+			//Pass if the evidence did not move
+		}
+		if(test2Board[0] == test2Evidence || test2Board[2] == test2Evidence) {
+			fail();
+			//Fail if the evidence is found in either of the blocked slots;
+		}
+		
+		//Third Test
+		Evidence test3Evidence = new Evidence(1);
+		Drawable[] test3Board = {new Vent(), test3Evidence, null, null};
+		test3Evidence.move(test3Board, 3);
+		if(test3Board[0] == test3Evidence || test3Board[2] == test3Evidence) {
+			fail();
+			//Fail if the evidence moved to either space around it
+		}
+		if(test3Board[1] == test3Evidence) {
+			assert(true);
+			//pass if the evidence did not move
+		}
+		
+		//Fourth Test
+		Evidence test4Evidence = new Evidence(2);
+		Drawable[] test4Board = {null, new Vent(), test4Evidence, null};
+		test4Evidence.move(test4Board, 0);
+		if(test4Board[1] == test4Evidence || test4Board[2] == test4Evidence) {
+			fail();
+			//Fail if the evidence moved left or did not move
+		}
+		if(test4Board[3] == test4Evidence) {
+			assert(true);
+			//pass if the evidence moved to the right
+		}
+			
+	}
 }
+
